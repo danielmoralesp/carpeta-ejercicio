@@ -9,4 +9,18 @@ altura = gets.chomp.to_f
 
 bmi = (peso / altura**2).round(1)
 
-puts "Tu BMI es #{bmi}"
+bajo = 18.5
+medio = 24.9
+medio2 = 25
+alto = 29.9
+
+
+if bmi < bajo
+  puts "Esta bajo de peso - su bmi es #{bmi}"
+elsif bmi >= bajo && bmi < medio
+  puts "Esta en peso normal - su bmi es #{bmi}"
+elsif bmi >= medio2 && bmi < alto
+  puts "Esta en Sobrepeso - su bmi es #{bmi}"
+else
+  puts "Esta Obeso - su bmi es #{bmi}"
+end
