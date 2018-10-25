@@ -12,3 +12,6 @@ txt_file.write(user_text)
 #txt_file.close
 
 puts "El archivo ha sido guardado"
+
+
+@user
