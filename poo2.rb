@@ -21,7 +21,7 @@ class Persona
 end
 
 p1 = Persona.new("Pedro", 30, :male)
-puts p1.age
+puts p1.age(age)
 # p1.age = 40 # esta linea no se puede ejecutar desde afuera
 p1.grow
 puts p1.age
