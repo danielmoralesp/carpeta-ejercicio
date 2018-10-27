@@ -37,7 +37,7 @@ p1.method_one
 p1.method_two
 
 
-module System
+module System  
   module Currency
     class Dollar
     end

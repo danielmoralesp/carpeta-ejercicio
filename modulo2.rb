@@ -12,13 +12,13 @@ end
 MyModule::ThingOne.new.method_inside_thing_one
 
 
-# class Person
-#   include MyModule
-#
-#   def initialize
-#     puts ThingOne.method_inside_thing_one
-#   end
-#
-# end
-#
-# Person.new
+class Person
+  include MyModule
+
+  def initialize
+    puts ThingOne.method_inside_thing_one
+  end
+
+end
+
+Person.new
