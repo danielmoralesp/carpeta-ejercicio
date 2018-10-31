@@ -20,7 +20,13 @@ get '/hola2/:nombre' do |n|
 end
 
 get '/primer_erb' do
-  erb :index
+  "Hola Mundo"
+  @codigo2 = "Pedro"
+  @codigo3 = "hola desde codigo 2"
+  if @codigo2 == @codigo3
+    "Es igual"
+  end
+  erb :codigo
 end
 
 
