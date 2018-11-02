@@ -9,6 +9,5 @@ end
 # end
 
 post '/hello' do
-  erb :hello
-  # "Hola #{params[:name]} con password #{params[:password]}"
+  "Hola #{params[:name]} con password #{params[:password]}"
 end
