@@ -1,5 +1,5 @@
 <%# Formulario para crear las nuevas notas %>
-<section>
+<section id ="add">
   <form class="" action="/" method="post">
     <textarea name="content" rows="8" cols="30" placeholder="Ingrese sus notas aqui"></textarea>
     <input type="submit" value="Toma nota!">
@@ -7,4 +7,15 @@
 </section>
 
 <%# De aqui hacia abajo vamosa a renderizar todas las notas %>
-<%= @notes %>
+<% @notes.each do |note| %>
+  <article <%= 'class="complete"' if note.complete %>>
+    <p>
+      <%= note.content %>
+      <span> <a href="/<%= note.id %>">[Edit]</a> </span>
+    </p>
+    <p class="links">
+      <a href="/<%= note.id %>/complete">&#8623</a>
+    </p>
+    <p class="meta">Created: <%= note.created_at %></p>
+  </article>
+<% end %>

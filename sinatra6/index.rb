@@ -10,7 +10,7 @@ DataMapper::setup(:default, "sqlite://#{Dir.pwd}/index.sqlite")
 # )
 
 # Definimos el modelo
-class Notes
+class Note
   include DataMapper::Resource
 
   property :id,         Serial    # An auto-increment integer key
@@ -26,13 +26,28 @@ class MiApp < Sinatra::Base
   # Read (CRUD)
   # Traer todas las notas y las vamos a mostrar al cliente
   get '/' do
-    @notes = Notes.all :order => :id.desc
+    @notes = Note.all :order => :id.desc
     @title = "Todas las Notes"
     erb :index
   end
 
 
   post '/' do
+    n = Note.new
+    n.content = params[:content]
+    n.created_at = Time.now
+    n.updated_at = Time.now
+    n.save
+    redirect '/'
+  end
+
+  get '/:id' do
+    @note = Note.get params[:id]
+    @title = "Editar la nota ##{params[:id]}"
+    erb :edit
+  end
+
+  get '/:id/complete' do
 
   end
 end
