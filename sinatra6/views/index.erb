@@ -1,0 +1,10 @@
+<%# Formulario para crear las nuevas notas %>
+<section>
+  <form class="" action="/" method="post">
+    <textarea name="content" rows="8" cols="30" placeholder="Ingrese sus notas aqui"></textarea>
+    <input type="submit" value="Toma nota!">
+  </form>
+</section>
+
+<%# De aqui hacia abajo vamosa a renderizar todas las notas %>
+<%= @notes %>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <title><%= @title %></title>
+  <link href="/reset.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <hgroup>
+      <h1><a href="/">Notes</a></h1>
+      <h2>porque estas muy ocupado para recordar, crea notas!</h2>
+    </hgroup>
+  </header>
+
+  <div id="main">
+    <%= yield %>
+  </div>
+
+  <footer>
+    <p><small>Una app de "Tu nombre"</small></p>
+  </footer>
+</body>
+</html>
